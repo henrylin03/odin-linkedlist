@@ -1,3 +1,6 @@
 export default function createNode() {
-  console.log("i am a node");
+  const value = null;
+  const nextNode = null;
+
+  return { value, nextNode };
 }
