@@ -7,6 +7,8 @@ export default function createLinkedList() {
   const append = (value) => {
     // add new node
     const newNode = createNode();
+    newNode.value = value;
+
     // add new node to the end of list
   };
 
