@@ -26,6 +26,15 @@ export default function createLinkedList() {
   };
 
   // manipulation methods
+  const prepend = (value) => {
+    const newNode = createNode(value);
+
+    // if list is non-empty, newNode's .nextNode property is the current head node
+    if (headNode !== null) newNode.nextNode = headNode;
+
+    headNode = newNode;
+  };
+
   const append = (value) => {
     const newNode = createNode(value);
 
@@ -35,13 +44,6 @@ export default function createLinkedList() {
     let currentNode = headNode;
     while (currentNode.nextNode !== null) currentNode = currentNode.nextNode;
     currentNode.nextNode = newNode;
-  };
-
-  const prepend = (value) => {
-    const newNode = createNode(value);
-
-    // if list is empty, new node is head
-    if (headNode === null) return headNode = newNode;
   };
 
   const pop = () => {
