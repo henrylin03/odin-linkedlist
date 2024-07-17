@@ -3,14 +3,16 @@ import createNode from "./createNode.mjs";
 export default function createLinkedList() {
   let headNode = null;
   // let tailNode = null;
-  let listLength = 0;
+  // let listLength = 0;
 
   // getters
   const head = () => headNode;
   const tail = () => {
     //get tail node
   };
-  const size = () => listLength;
+  const size = () => {
+    //get length of linked list
+  };
 
   // finder methods
   const at = (idx) => {
@@ -28,7 +30,6 @@ export default function createLinkedList() {
   // manipulation methods
   const append = (value) => {
     const newNode = createNode(value);
-    listLength++;
 
     // if the list is empty, new node is head
     if (headNode === null) return (headNode = newNode);
@@ -39,7 +40,7 @@ export default function createLinkedList() {
   };
 
   const prepend = (value) => {
-    // add node with value to start of linked list
+    const newNode = createNode(value);
   };
 
   const pop = () => {
