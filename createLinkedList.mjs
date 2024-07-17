@@ -1,9 +1,14 @@
 import createNode from "./createNode.mjs";
 
 export default function createLinkedList() {
-  let size = 0;
-  const head = ""; // returns first node in list
-  const tail = ""; // returns last node in list
+  let headNode = null;
+  let tailNode = null;
+    let listLength = 0;
+
+  // getters
+  const head = () => headNode;
+  const tail = () => tailNode;
+  const size = () => listLength;
 
   // finder methods
   const at = (idx) => {
