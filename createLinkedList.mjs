@@ -1,8 +1,7 @@
 import createNode from "./createNode.mjs";
 
 export default function createLinkedList() {
-  const list = [];
-  const size = list.length;
+  let size = 0
   const head = ""; // returns first node in list
   const tail = ""; // returns last node in list
 
