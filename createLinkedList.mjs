@@ -3,7 +3,7 @@ import createNode from "./createNode.mjs";
 export default function createLinkedList() {
   let headNode = null;
   let tailNode = null;
-    let listLength = 0;
+  let listLength = 0;
 
   // getters
   const head = () => headNode;
@@ -25,10 +25,15 @@ export default function createLinkedList() {
 
   // manipulation methods
   const append = (value) => {
-    const newNode = createNode();
-    newNode.value = value;
+    const newNode = createNode(value);
+    listLength++;
 
-    // if the list is empty, the list is just the node
+    // if the list is empty, new node is head
+    if (headNode === null) return (headNode = newNode);
+
+    // traverse the linked list to the very last node
+
+    // update that last node's 'next' property
 
     // get the last node in the list, and update it's .next pointer to the current node's value
   };

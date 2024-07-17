@@ -1,3 +1,4 @@
 import createLinkedList from "./createLinkedList.mjs";
 
-createLinkedList();
+const linkedList = createLinkedList();
+linkedList.append("test");
