@@ -54,7 +54,10 @@ export default function createLinkedList() {
   };
 
   const toString = () => {
-    // print out based on format: ( value ) -> ( value ) => ( value ) -> null
+    const res = "";
+    if (headNode === null) return "null";
+
+    // print out based on format: ( value ) -> ( value ) -> ( value ) -> null
   };
 
   const insertAt = (value, idx) => {
