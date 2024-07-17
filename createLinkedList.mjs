@@ -2,8 +2,6 @@ import createNode from "./createNode.mjs";
 
 export default function createLinkedList() {
   let headNode = null;
-  // let tailNode = null;
-  // let listLength = 0;
 
   // getters
   const head = () => headNode;
@@ -31,7 +29,7 @@ export default function createLinkedList() {
   const append = (value) => {
     const newNode = createNode(value);
 
-    // if the list is empty, new node is head
+    // if list is empty, new node is head
     if (headNode === null) return (headNode = newNode);
 
     let currentNode = headNode;
@@ -41,6 +39,9 @@ export default function createLinkedList() {
 
   const prepend = (value) => {
     const newNode = createNode(value);
+
+    // if list is empty, new node is head
+    if (headNode === null) return headNode = newNode;
   };
 
   const pop = () => {
