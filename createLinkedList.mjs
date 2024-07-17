@@ -31,11 +31,9 @@ export default function createLinkedList() {
     // if the list is empty, new node is head
     if (headNode === null) return (headNode = newNode);
 
-    // traverse the linked list to the very last node
-
-    // update that last node's 'next' property
-
-    // get the last node in the list, and update it's .next pointer to the current node's value
+    let currentNode = headNode;
+    while (currentNode.nextNode !== null) currentNode = currentNode.nextNode;
+    currentNode.nextNode = newNode;
   };
 
   const prepend = (value) => {
