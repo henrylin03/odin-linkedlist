@@ -42,7 +42,10 @@ export default function createLinkedList() {
     if (headNode === null) return (headNode = newNode);
 
     let currentNode = headNode;
-    while (currentNode.nextNode !== null) currentNode = currentNode.nextNode;
+    // traverse
+    while (currentNode.nextNode !== null) {
+      currentNode = currentNode.nextNode;
+    }
     currentNode.nextNode = newNode;
   };
 
