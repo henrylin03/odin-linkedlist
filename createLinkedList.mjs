@@ -1,7 +1,7 @@
 import createNode from "./createNode.mjs";
 
 export default function createLinkedList() {
-  let size = 0
+  let size = 0;
   const head = ""; // returns first node in list
   const tail = ""; // returns last node in list
 
@@ -49,7 +49,6 @@ export default function createLinkedList() {
   };
 
   return {
-    list,
     size,
     head,
     tail,
@@ -60,5 +59,7 @@ export default function createLinkedList() {
     find,
     contains,
     toString,
+    insertAt,
+    removeAt,
   };
 }
