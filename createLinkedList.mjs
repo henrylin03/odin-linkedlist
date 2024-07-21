@@ -17,7 +17,8 @@ export default function createLinkedList() {
   };
 
   const size = () => {
-    if (headNode === null) return 0;
+    let count = 0;
+    if (headNode === null) return count;
 
     // if empty, return 0
     // traverse and then increment
