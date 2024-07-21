@@ -64,7 +64,7 @@ export default function createLinkedList() {
       currentNode = currentNode.nextNode;
     }
 
-    return (res += "null");
+    return (res += `${currentNode}`);
   };
 
   const insertAt = (value, idx) => {
