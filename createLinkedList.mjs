@@ -20,9 +20,13 @@ export default function createLinkedList() {
     let count = 0;
     if (headNode === null) return count;
 
-    // if empty, return 0
-    // traverse and then increment
-    // return count
+    let currentNode = headNode;
+    while (currentNode) {
+      count++;
+      currentNode = currentNode.nextNode;
+    }
+    
+    return count;
   };
 
   /* finders */
