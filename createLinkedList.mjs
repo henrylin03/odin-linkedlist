@@ -48,12 +48,8 @@ export default function createLinkedList() {
     // if list is empty, new node is head
     if (headNode === null) return (headNode = newNode);
 
-    // traverse
-    let currentNode = headNode;
-    while (currentNode.nextNode !== null) {
-      currentNode = currentNode.nextNode;
-    }
-    currentNode.nextNode = newNode;
+    const tailNode = tail();
+    tailNode.nextNode = newNode;
   };
 
   const pop = () => {
