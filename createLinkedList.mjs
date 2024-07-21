@@ -59,12 +59,12 @@ export default function createLinkedList() {
 
     // traversing
     let currentNode = headNode;
-    while (currentNode.nextNode !== null) {
+    while (currentNode) {
       res += `( ${currentNode.value} ) -> `;
       currentNode = currentNode.nextNode;
     }
 
-    return (res += `${currentNode.nextNode}`);
+    return (res += "null");
   };
 
   const insertAt = (value, idx) => {
