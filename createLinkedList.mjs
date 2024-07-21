@@ -61,7 +61,15 @@ export default function createLinkedList() {
   };
 
   const contains = (value) => {
-    // returns true if value exists in linked list, otherwise returns false
+    if (headNode === null) return false;
+
+    let currentNode = headNode;
+    while (currentNode) {
+      if (currentNode.value === value) return true;
+      currentNode = currentNode.nextNode;
+    }
+
+    return false;
   };
 
   /* manipulation methods */
