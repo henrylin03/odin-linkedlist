@@ -68,12 +68,11 @@ export default function createLinkedList() {
     if (length === 0) return console.log("Linked list is already empty.");
 
     let currentNode = headNode;
-    while (currentNode.nextNode !== null) {
+    while (currentNode.nextNode.nextNode) {
       currentNode = currentNode.nextNode;
-      console.log(currentNode.value);
     }
 
-    // traverse through linked list, until we reach the second last element, and we make its .nextNode be null
+    currentNode.nextNode = null;
   };
 
   const insertAt = (value, idx) => {
