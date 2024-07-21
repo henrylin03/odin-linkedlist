@@ -17,7 +17,11 @@ export default function createLinkedList() {
   };
 
   const size = () => {
-    //get length of linked list
+    if (headNode === null) return 0;
+
+    // if empty, return 0
+    // traverse and then increment
+    // return count
   };
 
   /* finders */
