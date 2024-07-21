@@ -105,14 +105,6 @@ export default function createLinkedList() {
     currentNode.nextNode = null;
   };
 
-  const insertAt = (value, idx) => {
-    // inserts new node with provided value at given index
-  };
-
-  const removeAt = (idx) => {
-    // removes node at given idx
-  };
-
   /* printing */
   const toString = () => {
     let res = "";
