@@ -3,8 +3,8 @@ import createNode from "./createNode.mjs";
 export default function createLinkedList() {
   let headNode = null;
 
-  // getters
   const head = () => headNode;
+
   const tail = () => {
     if (headNode === null) return null; // empty linked list
 
@@ -15,11 +15,12 @@ export default function createLinkedList() {
 
     return currentNode;
   };
+
   const size = () => {
     //get length of linked list
   };
 
-  // finder methods
+  /* finders */
   const at = (idx) => {
     // returns node at given index
   };
@@ -32,7 +33,7 @@ export default function createLinkedList() {
     // returns true if value exists in linked list, otherwise returns false
   };
 
-  // manipulation methods
+  /* manipulation methods */
   const prepend = (value) => {
     const newNode = createNode(value);
 
@@ -64,7 +65,7 @@ export default function createLinkedList() {
     // removes node at given idx
   };
 
-  // printing method
+  /* printing */
   const toString = () => {
     let res = "";
     if (headNode === null) return "null"; // empty linkedList
