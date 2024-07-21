@@ -6,7 +6,14 @@ export default function createLinkedList() {
   // getters
   const head = () => headNode;
   const tail = () => {
-    //get tail node
+    if (headNode === null) return null; // empty linked list
+
+    let currentNode = headNode;
+    while (currentNode.nextNode !== null) {
+      currentNode = currentNode.nextNode;
+    }
+
+    return currentNode;
   };
   const size = () => {
     //get length of linked list
@@ -53,6 +60,15 @@ export default function createLinkedList() {
     // removes last element of linked list
   };
 
+  const insertAt = (value, idx) => {
+    // inserts new node with provided value at given index
+  };
+
+  const removeAt = (idx) => {
+    // removes node at given idx
+  };
+
+  // printing method
   const toString = () => {
     let res = "";
     if (headNode === null) return "null"; // empty linkedList
@@ -65,14 +81,6 @@ export default function createLinkedList() {
     }
 
     return (res += `${currentNode}`);
-  };
-
-  const insertAt = (value, idx) => {
-    // inserts new node with provided value at given index
-  };
-
-  const removeAt = (idx) => {
-    // removes node at given idx
   };
 
   return {

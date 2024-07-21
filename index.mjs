@@ -3,7 +3,7 @@ import createLinkedList from "./createLinkedList.mjs";
 const linkedList = createLinkedList();
 
 // test
-console.log(linkedList.tail().value); // null
+console.log(linkedList.tail()); // null
 
 linkedList.append(3);
 linkedList.append(4);
