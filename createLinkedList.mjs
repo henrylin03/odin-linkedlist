@@ -54,12 +54,17 @@ export default function createLinkedList() {
   };
 
   const toString = () => {
-    const res = "";
+    let res = "";
+    if (headNode === null) return "null"; // empty linkedList
 
-    if (headNode === null) return "null";
+    // traversing
+    let currentNode = headNode;
+    while (currentNode.nextNode !== null) {
+      res += `( ${currentNode.value} ) -> `;
+      currentNode = currentNode.nextNode;
+    }
 
-    // print out based on format: ( value ) -> ( value ) -> ( value ) -> null
-    return res;
+    return (res += `${currentNode.nextNode}`);
   };
 
   const insertAt = (value, idx) => {
