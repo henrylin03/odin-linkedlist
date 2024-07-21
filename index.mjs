@@ -1,11 +1,13 @@
 import createLinkedList from "./createLinkedList.mjs";
 
-const linkedList = createLinkedList();
+const list = createLinkedList();
 
 // test
-linkedList.append(3);
-linkedList.append(4);
-linkedList.prepend(2);
-linkedList.prepend(1);
+list.append("dog");
+list.append("cat");
+list.append("parrot");
+list.append("hamster");
+list.append("snake");
+list.append("turtle");
 
-console.log(linkedList.toString());
+console.log(list.toString());

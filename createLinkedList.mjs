@@ -131,7 +131,5 @@ export default function createLinkedList() {
     find,
     contains,
     toString,
-    insertAt,
-    removeAt,
   };
 }
