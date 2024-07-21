@@ -37,7 +37,15 @@ export default function createLinkedList() {
   const find = (value) => {
     if (headNode === null) return null;
 
-    // else, traverse and find the value and return the idx (which needs to be initialised and tracked)
+    let idx = 0;
+    let currentNode = headNode;
+    while (currentNode) {
+      if (currentNode.value === value) return idx;
+      currentNode = currentNode.nextNode;
+      idx++;
+    }
+
+    return null;
   };
 
   const contains = (value) => {
