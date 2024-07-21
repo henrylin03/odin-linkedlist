@@ -41,8 +41,8 @@ export default function createLinkedList() {
     // if list is empty, new node is head
     if (headNode === null) return (headNode = newNode);
 
-    let currentNode = headNode;
     // traverse
+    let currentNode = headNode;
     while (currentNode.nextNode !== null) {
       currentNode = currentNode.nextNode;
     }
