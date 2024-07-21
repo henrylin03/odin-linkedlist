@@ -31,7 +31,19 @@ export default function createLinkedList() {
 
   /* finders */
   const at = (idx) => {
-    // returns node at given index
+    const length = size();
+
+    if (length === 0) return null;
+    if (idx < 0) idx = length + idx;
+    if (idx >= length || idx < 0) {
+      console.error("Given index is out of range.");
+      return null;
+    }
+
+    let currentNode = headNode;
+    for (let i = 0; i < idx; i++) currentNode = currentNode.nextNode;
+
+    return currentNode;
   };
 
   const find = (value) => {
