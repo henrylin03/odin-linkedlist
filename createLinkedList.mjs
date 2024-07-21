@@ -63,8 +63,14 @@ export default function createLinkedList() {
   };
 
   const pop = () => {
-    if (headNode === null) {
-      return console.log("Linked list is already empty.");
+    const length = size();
+
+    if (length === 0) return console.log("Linked list is already empty.");
+
+    let currentNode = headNode;
+    while (currentNode.nextNode !== null) {
+      currentNode = currentNode.nextNode;
+      console.log(currentNode.value);
     }
 
     // traverse through linked list, until we reach the second last element, and we make its .nextNode be null
