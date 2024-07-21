@@ -35,7 +35,9 @@ export default function createLinkedList() {
   };
 
   const find = (value) => {
-    // retrns idx of node containing value, or null if not found
+    if (headNode === null) return null;
+
+    // else, traverse and find the value and return the idx (which needs to be initialised and tracked)
   };
 
   const contains = (value) => {
@@ -72,7 +74,6 @@ export default function createLinkedList() {
     while (currentNode.nextNode.nextNode) {
       currentNode = currentNode.nextNode;
     }
-
     currentNode.nextNode = null;
   };
 
