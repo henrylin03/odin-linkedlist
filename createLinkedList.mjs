@@ -36,7 +36,7 @@ export default function createLinkedList() {
   const prepend = (value) => {
     const newNode = createNode(value);
 
-    // if list is non-empty, newNode's .nextNode property is the current head node
+    // if list is non-empty
     if (headNode !== null) newNode.nextNode = headNode;
 
     headNode = newNode;
