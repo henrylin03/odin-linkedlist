@@ -66,6 +66,7 @@ export default function createLinkedList() {
     const length = size();
 
     if (length === 0) return console.log("Linked list is already empty.");
+    if (length === 1) return (headNode = null);
 
     let currentNode = headNode;
     while (currentNode.nextNode.nextNode) {

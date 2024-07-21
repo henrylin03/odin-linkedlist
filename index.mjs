@@ -6,9 +6,9 @@ const linkedList = createLinkedList();
 linkedList.pop(); // expected: logged message
 
 linkedList.append(3);
-linkedList.append(4);
-linkedList.prepend(2);
-linkedList.prepend(1);
+// linkedList.append(4);
+// linkedList.prepend(2);
+// linkedList.prepend(1);
 
 console.log(linkedList.toString());
 
