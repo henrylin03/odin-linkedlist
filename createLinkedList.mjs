@@ -25,7 +25,7 @@ export default function createLinkedList() {
       count++;
       currentNode = currentNode.nextNode;
     }
-    
+
     return count;
   };
 
@@ -63,7 +63,11 @@ export default function createLinkedList() {
   };
 
   const pop = () => {
-    // removes last element of linked list
+    if (headNode === null) {
+      return console.log("Linked list is already empty.");
+    }
+
+    // traverse through linked list, until we reach the second last element, and we make its .nextNode be null
   };
 
   const insertAt = (value, idx) => {
